@@ -1,2 +1,4 @@
 # RxNotes
-Writing notes about the dance of RxSwift and MVVM, in iOS. 
+Some notes recording the dance of RxSwift and MVVM in iOS.
+
+
