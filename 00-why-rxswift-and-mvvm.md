@@ -28,6 +28,6 @@ MVVM 可以比较好的解决这一问题，它的模式是这样的：
 如果你现在对 RxSwift 一无所知，这里有一些相关链接：
 
 1. [RxSwift GitHub]（https://github.com/ReactiveX/RxSwift）
-2. Ray Wenderlich 出的这本[RxSwift: Reactive Programming with Swift] 质量很高，推荐购买
+2. Ray Wenderlich 出的这本[RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) 质量很高，推荐购买
 
 以后的文章中开始细谈一些具体实践。
