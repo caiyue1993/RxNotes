@@ -4,5 +4,5 @@
 
 本仓库旨在记录自己在实际使用时的具体实践，以及在该过程中总结的个人经验。
 
-- [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
+0. [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
 
