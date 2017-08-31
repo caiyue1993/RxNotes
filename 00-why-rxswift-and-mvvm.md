@@ -10,7 +10,7 @@
 
 ![Reality.png](https://i.loli.net/2017/08/31/59a82af531c9c.png)
 
-经历过的人相信已经会心一笑了。
+View 和 Model 耦合在了一起（你可以检查一下自己的代码，View 是否和 Model 无依赖？）。经历过的人相信已经会心一笑了。
 
 ## New MVVM（feat.RxSwift）
 MVVM 可以比较好的解决这一问题，它的模式是这样的：
@@ -23,7 +23,7 @@ MVVM 可以比较好的解决这一问题，它的模式是这样的：
 - ViewModel 是拥有 Model 的，那么当 Model 变化的时候，ViewModel 也会随之改变；而一旦 ViewModel 改变，View 也同样需要更新。
 - View 产生的行为（例如用户的点击动作）也需要传递给 ViewModel。 
 
-桥梁上要是有“动车”就好了：MVVM 配合一个绑定机制效果就好了。而在 Swift 领域，RxSwift 是首选（备选的有 ReactiveCocoa 等）。
+桥梁上要是有“动车”就好了：MVVM 配合一个绑定机制效果就好了。而在 Swift 领域，RxSwift 算是首选（备选有 ReactiveCocoa 等）。
 
 如果你现在对 RxSwift 一无所知，这里有一些相关链接：
 
