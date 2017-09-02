@@ -5,4 +5,4 @@
 本仓库旨在记录自己在实际使用 RxSwift 时的具体实践，以及在该过程中总结的个人经验。
 
 0. [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
-1. [View Model 的设计](https://github.com/caiyue1993/RxNotes/blob/master/01-view-model.md)
+1. [ViewModel 的一种良好设计](https://github.com/caiyue1993/RxNotes/blob/master/01-view-model.md)
