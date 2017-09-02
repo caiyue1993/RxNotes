@@ -1,5 +1,5 @@
 # View Model
-在具体实践中，我一般会将 ViewModel 拆成三个部分：Input, Output 和 Init。
+一般来说，ViewModel 可以拆成四个部分：Input, Output, Init 和 Methods。
 
 先看一个比较简单的例子：
 
