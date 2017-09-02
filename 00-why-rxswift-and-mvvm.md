@@ -31,8 +31,8 @@ MVVM 可以比较好的解决 MVC 中暴露出来的问题，它的模式是这�
 
 RxSwift 的一些相关链接：
 
-1. [RxSwift GitHub]（https://github.com/ReactiveX/RxSwift）
-2. Ray Wenderlich 出的这本[RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) 质量很高
+1. [RxSwift GitHub](https://github.com/ReactiveX/RxSwift)
+2. [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) 
 3. [View Models at Kickstarter](https://talk.objc.io/episodes/S01E47-view-models-at-kickstarter)
 4. [介绍 MVVM](https://github.com/nixzhu/dev-blog/blob/master/2014-06-10-mvvm.md)
 
