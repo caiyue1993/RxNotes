@@ -29,11 +29,9 @@ MVVM 可以比较好的解决 MVC 中暴露出来的问题，它的模式是这�
 
 桥梁上要是有“动车”就好了：MVVM 配合一个绑定机制效果就好了。而在 Swift 领域，RxSwift 算是首选（备选有 ReactiveCocoa 等）。
 
-RxSwift 的一些相关链接：
+RxSwift 有多 Cool 将在之后的文章中详细阐述，以下提供了相关链接供学习：
 
 1. [RxSwift GitHub](https://github.com/ReactiveX/RxSwift)
 2. [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) 
 3. [View Models at Kickstarter](https://talk.objc.io/episodes/S01E47-view-models-at-kickstarter)
 4. [介绍 MVVM](https://github.com/nixzhu/dev-blog/blob/master/2014-06-10-mvvm.md)
-
-以后的文章中将会记录一些 RxSwift + MVVM 的具体实践。
