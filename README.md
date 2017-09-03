@@ -1,6 +1,6 @@
 # RxNotes
 
-记录在 iOS 开发中 MVVM 设计模式的具体实践，需要一定的 RxSwift 基础。
+记录在 iOS 开发中 MVVM 设计模式的具体实践（具有一定的 RxSwift 基础可以更好阅读）。
 
 - [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
 - [捋清 RxSwift 中的一些概念]
