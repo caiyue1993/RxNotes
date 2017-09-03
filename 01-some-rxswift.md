@@ -22,7 +22,7 @@ override func viewDidLoad(_ animated: Bool) {
 ## Observable
 Observable 应当是 RxSwift 里最核心的概念。它可以 emit 三种事件（Event）：
 
-附图。
+![Observable.png](https://i.loli.net/2017/09/03/59ac24b0d80fa.png)
 
 值得注意的一点是，Observable 只有被 subscribe 之后才会真正地 emit event。另外，Observable 接收到 terminated 事件的时候，当前对应的 Subscription 会被 dispose 掉。
 
@@ -40,7 +40,7 @@ Observable 应当是 RxSwift 里最核心的概念。它可以 emit 三种事件
 
 在 RxSwift 中，map 将 Observable 中发出 next 事件中的 element 按照给定的转换函数进行映射，并返回映射后的 Observable。用图来解释就是：
 
-附图。
+![map.png](https://i.loli.net/2017/09/03/59ac24cb23029.png)
 
 ### FlatMap
 关于 Swift 中 flatMap 是什么，我推荐看[flatMap 温顾知新 —— 参照 Swift 源码实现讲解](http://www.jianshu.com/p/7deadf85a5a5)这篇文章，解释地十分详细；进阶版解释可以看[Swift 烧脑体操（四） - map 和 flatMap](http://www.infoq.com/cn/articles/swift-brain-gym-map-and-flatmap#)。
@@ -83,9 +83,9 @@ struct Student {
 
   charlotte.score.value = 100
 ```
-将会打印出 80,85,90,95,100。也就是说，最终的效果是，它同时可以“监听”多个 Observable 中的子 Observable 产生的变化，用图表示是这个样子：
+将会打印出 80,85,90,95,100。也就是说，最终的效果是，它同时可以“监听”多个 Observable 中的子 Observable 产生的变化，用图表示是这个样子（为了方便手绘了）：
 
-附图。
+![flatmap.png](https://i.loli.net/2017/09/04/59ac29331c790.png)
 
 那么如果你想要只“监听”最新加入的 Observable 应该怎么办呢？RxSwift 提供了 flatMapLatest 方法，也就是说，改用 flatMapLatest 后上面的输入将会打印出 80,85,90,100。
 
