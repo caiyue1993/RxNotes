@@ -4,7 +4,7 @@
 
 - [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
 - [关于 Observable 和 Operator 的一些认识](https://github.com/caiyue1993/RxNotes/blob/master/01-observable-and-operator.md)
-
+- 谈谈 ViewModel 的结构设计
 ---
 持续写作中。
 
