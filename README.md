@@ -5,6 +5,8 @@
 - [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
 - [关于 Observable 和 Operator 的一些认识](https://github.com/caiyue1993/RxNotes/blob/master/01-observable-and-operator.md)
 
-有更新或者改进的建议欢迎提 PR，转载请注明出处。
+---
+持续更新中。
 
+有任何改进的建议欢迎提 PR，转载请注明出处。
 
