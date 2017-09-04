@@ -24,14 +24,14 @@ MVVM 可以比较好的解决 MVC 中暴露出来的问题，它的模式是这�
 2. MVVM 提供了更好的封装性，业务逻辑放在了 ViewModel 中，View/ViewController 只关心 UI（或者只关心必要的渲染数据） 
 
 其中比较核心的是 ViewModel ，它在 View/ViewController 和 Model 之间搭建起了一个“桥梁”。具体来说：
-- ViewModel 是拥有 Model 的，那么当 Model 变化的时候，ViewModel 也会随之改变；而一旦 ViewModel 改变，View 也同样需要更新。
+- ViewModel 是拥有 Model 的，那么当 Model 变化的时候，ViewModel 也会随之改变；而一旦 ViewModel 改变，View 也同样需要更新（值得注意的是，这是单向绑定，唐巧在他的[被误解的 MVC 和被神化的 MVVM](http://blog.devtang.com/2015/11/02/mvc-and-mvvm/)说这是双向绑定是有问题的）。
 - View 产生的行为（例如用户的点击动作）也需要传递给 ViewModel 去处理。 
 
 桥梁上要是有“动车”就好了：MVVM 配合一个绑定机制效果就好了。而在 Swift 领域，RxSwift 算是首选（备选有 ReactiveCocoa 等）。
 
-RxSwift 有多 Cool 将在之后的文章中详细阐述，以下提供了相关链接供学习：
+RxSwift 的强大之处将在之后的文章中详细阐述，以下提供了相关链接供上手学习：
 
-1. [RxSwift GitHub](https://github.com/ReactiveX/RxSwift)
-2. [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) 
-3. [View Models at Kickstarter](https://talk.objc.io/episodes/S01E47-view-models-at-kickstarter)
-4. [介绍 MVVM](https://github.com/nixzhu/dev-blog/blob/master/2014-06-10-mvvm.md)
+1. [RxSwift 官方 repo](https://github.com/ReactiveX/RxSwift)
+2. [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) Ray Wenderlich 出的一本不可多得的好书
+3. [View Models at Kickstarter](https://talk.objc.io/episodes/S01E47-view-models-at-kickstarter) 
+4. [介绍 MVVM](https://github.com/nixzhu/dev-blog/blob/master/2014-06-10-mvvm.md) Nix 早期翻译的一篇关于 MVVM 的文章
