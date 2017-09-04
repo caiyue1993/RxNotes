@@ -1,4 +1,4 @@
-# 提到 Observable 和 Operator 时需要注意的
+# 关于 Observable 和 Operator 的一些认识
 
 关于 RxSwift 的入门学习，在[官方 GitHub 仓库](https://github.com/ReactiveX/RxSwift)上已经提供了很多文档。另外，同样有对应的[中文文档](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/)释出。
 
