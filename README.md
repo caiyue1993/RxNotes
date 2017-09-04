@@ -6,7 +6,7 @@
 - [关于 Observable 和 Operator 的一些认识](https://github.com/caiyue1993/RxNotes/blob/master/01-observable-and-operator.md)
 
 ---
-持续更新中。
+持续写作中。
 
-有任何改进的建议欢迎提 PR，转载请注明出处。
+有任何改进的建议欢迎提 PR，转载请注明出处：）。
 
