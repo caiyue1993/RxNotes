@@ -89,7 +89,21 @@ struct Student {
 
 那么如果你想要只“监听”最新加入的 Observable 应该怎么办呢？RxSwift 提供了 flatMapLatest 方法，也就是说，改用 flatMapLatest 后上面的输入将会打印出 80,85,90,100。
 
-
+### One more
+特别的，flatMap 还适合解决异步返回的问题：（例子来源于[靛青K](https://medium.com/@DianQK/rxswift-%E4%B8%8B%E7%9A%84-map-%E4%B8%8E-flatmap-d0b319aef819)）
+```swift
+Observable.just(1)
+		.map { $0 * 2 }
+		.flatMap { value -> Observable<String> in
+			return Observable.create { observer in
+				DispatchQueue.main.async {
+					observer.onNext(String(value))
+					observer.onCompleted()
+				}
+			}
+		}
+```
+这也是为什么在 RxSwift 的实际使用中，flatMap 出镜率比较高的原因之一。
 
 
 
