@@ -105,7 +105,7 @@ Observable.just(1)
 这也是为什么在 RxSwift 的实际使用中，flatMap 出镜率比较高的原因之一。
 
 ### Zip & CombineLatest
-比较完了 RxSwift 中的 flatMap 和 Map，再看另一对出场率很高的 Operator: zip & combineLatest。
+比较完了 RxSwift 中的 flatMap 和 Map，再看另一对出场率很高的 Operator: zip 以及 combineLatest。
 ### Zip
 
 ### CombineLatest
