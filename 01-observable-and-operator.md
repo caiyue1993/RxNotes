@@ -104,11 +104,28 @@ Observable.just(1)
 ```
 这也是为什么在 RxSwift 的实际使用中，flatMap 出镜率比较高的原因之一。
 
-### Zip & CombineLatest
-比较完了 RxSwift 中的 flatMap 和 Map，再看另一对出场率很高的 Operator: zip 以及 combineLatest。
-### Zip
+### CombineLatest & Zip
+比较完了 RxSwift 中的 flatMap 和 Map，再看另一对出场率很高的 combineLatest 以及 zip。在实际开发过程中，常会遇到这样的情况：我们得等到两个或两个以上的 Observable 接受到输入之后，再进行输出。
+#### CombineLatest
+先看 CombineLatest 的示例图：
+![combineLatest.png](https://i.loli.net/2017/09/06/59af441b5e43e.png)
 
-### CombineLatest
+分别拿到两个 Observable 最新发出的 element，并通过 CombineLatest 中的函数（也就是下面代码中的 resultSelector）转成另一个值，最后返回包含这个值的 Observable。（从图中可以知道，只要有最新的 element 都会发出事件）
 
+直接看 CombineLatest 的源码定义：
+```swift
+public static func combineLatest<O1: ObservableType, O2: ObservableType>
+        (_ source1: O1, _ source2: O2, resultSelector: @escaping (O1.E, O2.E) throws -> E)
+            -> Observable<E> {
+        return CombineLatest2(
+            source1: source1.asObservable(), source2: source2.asObservable(),
+            resultSelector: resultSelector
+        )
+    }
+```
+#### Zip
+直接用一张图解释区别吧。（在这时真的感受到一图胜千言...）
+
+![zip.png](https://i.loli.net/2017/09/06/59af468078ad1.png)
 
 
