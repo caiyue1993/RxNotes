@@ -10,7 +10,4 @@
 
 有任何改进的建议欢迎提 PR，转载请注明出处：）。
 
-## Contact
-- Twitter: [@caiyue5](https://twitter.com/caiyue5)
-- Weibo: [@CaiYue_](http://weibo.com/caiyue233)
 
