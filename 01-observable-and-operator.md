@@ -128,4 +128,5 @@ public static func combineLatest<O1: ObservableType, O2: ObservableType>
 
 ![zip.png](https://i.loli.net/2017/09/06/59af468078ad1.png)
 
+其实还有一个类似的 withLatestFrom，可以自己查阅 [reactivex.io](http://reactivex.io/documentation/operators.html) 上的文档。
 
