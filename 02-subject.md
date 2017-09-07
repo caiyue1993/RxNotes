@@ -39,6 +39,10 @@ An observer subscribes to an Observable.
 
 > 通俗的来说，Observer 会根据 Observable 发出的事件做出相应的行为。
 
+关于二者的关系徒手画了一个示意图：
+
+![Image-1.jpg](https://i.loli.net/2017/09/08/59b16d006db04.jpg)
+
 ## Subject
 如果理清了 Observer 和 Observable 的关系，那么就明白了 Subject ：
 
