@@ -26,7 +26,7 @@ Observable<String>.create { (observer) -> Disposable in
     return Disposables.create()
 }
 ```
-（在这里，observer 是 AnyObserver 类型，它可以将值加入到 Observable sequence 中）
+（在这里，observer 是 AnyObserver 类型（不是 Observer!），它可以将值加入到 Observable sequence 中）
 通过上述代码，我们用了最原始的创建方法创建了一个 Observable。（当然在 Subscribe 中，第二个 next 事件是不会发出的）
 
 那么你应该也就知道了，Observable 的 just 以及 from 等一些快捷创建 Observable 的方法等，本质上都是对原始创建方法的封装。
