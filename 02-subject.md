@@ -50,7 +50,7 @@ An observer subscribes to an Observable.
 
 分开来看：因为 Subject 是 Observer，那么它可以订阅到（Subscribe to）一个或多个 Observable 上；又因为它是 Observable，那么它可以传递（emit）它观察到的事件或值（当 next 事件时）。
 
-Subject 既是一个 Observer 也是一个 Observable 解决了什么问题呢？有了 Subject，那么可以它可以在运行时接收事件（Observer 的特性），又可以传递观察到的事件，让 subscriber 感知到，做出相应的行为（Observable 的特性）。
+Subject 既是一个 Observer 也是一个 Observable 解决了什么问题呢？有了 Subject，那么可以它可以在运行时接收事件（Observer 的特性）;又可以传递观察到的事件，根据不同的事件做出相应的行为（Observable 的特性）。
 
 在后续文章中将会结合 MVVM 设计模式以及具体的实例，再谈。
 
