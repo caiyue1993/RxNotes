@@ -13,11 +13,11 @@ anObservable.subscribe(onNext: { (element) in
         // Do something when completed
     }).addDisposableTo(bag)
 ```
-Observable 通过 subscribe，观察者在闭包中对相应事件（onNext, onError, onCompleted 等）进行处理。
+Observable 通过 subscribe，在闭包中对相应事件（onNext, onError, onCompleted 等）进行处理。
 
-那么问题来了，Observable 是在什么时候发出这些事件的呢？
+那么问题来了，这个 Observable 是在什么时候发出这些事件的呢？
 
-来看看 Observable 的创建方法：
+来看看 Observable 的创建方法 create：
 ```swift
 Observable<String>.create { (observer) -> Disposable in
     observer.onNext("1")
@@ -27,9 +27,9 @@ Observable<String>.create { (observer) -> Disposable in
 }
 ```
 （在这里，observer 是 AnyObserver 类型（不是 Observer!），它可以将值加入到 Observable 的 event sequence 中）
-通过上述代码，我们用了最原始的创建方法创建了一个 Observable。（当然在 Subscribe 中，第二个 next 事件是不会发出的，因为已经被 terminated）
+通过上述代码，我们用了最原始的创建方法创建了一个 Observable。（当然被 Subscribe 了之后，第二个 next 事件是不会发出的，因为已经被 terminated）
 
-那么你应该也就知道了，Observable 的 just 以及 from 等一些快捷创建 Observable 的方法等，本质上都是对原始创建方法的封装。
+通过看源码可以发现，Observable 的 just 以及 from 等一些快捷创建 Observable 的方法等，本质上都是对原始创建方法的封装。
 
 ## 还有 Observer 
 Observer，“观察者”。它和 Observable 的关系是：
