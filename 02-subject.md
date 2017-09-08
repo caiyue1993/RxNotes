@@ -1,9 +1,9 @@
-# 简单地理解 Subject 
+# 我理解的 Subject 
 
 再谈 Subject 是什么之前，先回头看一下 Observable。
 
 ## 再看 Observable
-Observable，字面意思也知道：“可观测的”。最常见的用例是：
+Observable，字面意思：“可观测的”。最常见的用例是：
 ```swift
 anObservable.subscribe(onNext: { (element) in
         // Handle with element
@@ -13,9 +13,9 @@ anObservable.subscribe(onNext: { (element) in
         // Do something when completed
     }).addDisposableTo(bag)
 ```
-Observable 通过 subscribe，并在闭包中对**接收**到的相应事件（next, error, completed 等）进行处理。
+Observable 通过 subscribe，观察者在闭包中对相应事件（onNext, onError, onCompleted 等）进行处理。
 
-那么问题来了，Observable 是在什么时候接收到这些事件的呢？
+那么问题来了，Observable 是在什么时候发出这些事件的呢？
 
 来看看 Observable 的创建方法：
 ```swift
@@ -26,8 +26,8 @@ Observable<String>.create { (observer) -> Disposable in
     return Disposables.create()
 }
 ```
-（在这里，observer 是 AnyObserver 类型（不是 Observer!），它可以将值加入到 Observable sequence 中）
-通过上述代码，我们用了最原始的创建方法创建了一个 Observable。（当然在 Subscribe 中，第二个 next 事件是不会发出的）
+（在这里，observer 是 AnyObserver 类型（不是 Observer!），它可以将值加入到 Observable 的 event sequence 中）
+通过上述代码，我们用了最原始的创建方法创建了一个 Observable。（当然在 Subscribe 中，第二个 next 事件是不会发出的，因为已经被 terminated）
 
 那么你应该也就知道了，Observable 的 just 以及 from 等一些快捷创建 Observable 的方法等，本质上都是对原始创建方法的封装。
 
@@ -50,7 +50,9 @@ An observer subscribes to an Observable.
 
 分开来看：因为 Subject 是 Observer，那么它可以订阅到（Subscribe to）一个或多个 Observable 上；又因为它是 Observable，那么它可以传递（emit）它观察到的事件或值（当 next 事件时）。
 
-Subject 既是一个 Observer 也是一个 Observable 解决了什么问题呢？有了 Subject，那么可以它可以在运行时接受事件（Observer 的特性），又可以传递观察到的事件，让 subscriber 感知到，做出相应的行为。
+Subject 既是一个 Observer 也是一个 Observable 解决了什么问题呢？有了 Subject，那么可以它可以在运行时接收事件（Observer 的特性），又可以传递观察到的事件，让 subscriber 感知到，做出相应的行为（Observable 的特性）。
 
-在 RxSwift 中，Subject 分成四种，分别是 PublishSubject, BehaviorSubject, ReplaySubject 和 Variable。四者之间的定义以及区别就不在这细谈了，建议自己去网路搜寻。
+在后续文章中将会结合 MVVM 设计模式以及具体的实例，再谈。
+
+Stay tuned!
 
