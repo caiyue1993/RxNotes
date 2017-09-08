@@ -1,4 +1,4 @@
-# 简单地理解 Subject 是什么
+# 简单地理解 Subject 
 
 再谈 Subject 是什么之前，先回头看一下 Observable。
 
