@@ -7,7 +7,7 @@
 - [我理解的 Subject](https://github.com/caiyue1993/RxNotes/blob/master/02-what-is-subject.md)
 - 谈谈 ViewModel 的结构设计
 ---
-持续写作中。
+持续写作中。Stay tuned!
 
 有任何改进的建议欢迎提 PR，转载请注明出处：）。
 
