@@ -87,7 +87,7 @@ struct Student {
 
 ![flatmap.png](https://i.loli.net/2017/09/04/59ac29331c790.png)
 
-那么如果你想要只“监听”最新加入的 Observable 的子 Observable 应该怎么办呢？RxSwift 提供了 flatMapLatest 方法，也就是说，改用 flatMapLatest 后上面的输入将会打印出 80,85,90,100。
+那么如果你想要只“监听”最新加入的 Observable 的子 Observable 应该怎么办呢？RxSwift 提供了 [flatMapLatest](https://beeth0ven.github.io/RxSwift-Chinese-Documentation/content/decision_tree/flatMapLatest.html) 方法，也就是说，改用 flatMapLatest 后上面的输入将会打印出 80,85,90,100。
 
 特别的，flatMap 还适合解决异步返回的问题：（例子来源于[靛青K](https://medium.com/@DianQK/rxswift-%E4%B8%8B%E7%9A%84-map-%E4%B8%8E-flatmap-d0b319aef819)）
 ```swift
