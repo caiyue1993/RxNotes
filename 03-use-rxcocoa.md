@@ -65,7 +65,7 @@ Driver 是一个 Observable，由于它是一个 Units，那么它具备 Units �
 
 ```swift
 let search = searchCityName.rx.controlEvent(.editingDidEndOnExit).asObservable()
-.map { self.searchCityName.text }
+.map { self.searchCityName.text } // 将 Observable<Void> 转成 Observable<String?>
 .flatMap { text in 
     return Api.shared.currentWeather(city: text ?? "Error")
 }
@@ -79,6 +79,7 @@ search.map { $0.cityName }
 .addDisposableTo(bag)
 ```
 
+是不是简洁、合理了很多？
 
 
 
