@@ -37,7 +37,7 @@ search.map { $0.cityName }
 
 RxCocoa 中还有一些特别的 Observable，称为 Units。Units 更适合用来处理与 UI 相关的绑定，它有以下特点：
 
-- Units 不会产生 error 事件
+- Units 不会发出 error 事件
 - Units 默认在主线程上被观察
 - Units 默认在主线程上注册
 - Units share side effects
@@ -51,7 +51,32 @@ Units 主要分两种:
 
 ControlProperty 既是一个 ObservableType 也是 ObserverType，它主要对 Cocoa API 的属性进行封装，例如 UITextField.rx.text。ControlEvent 是一个 ObservableType，它封装了 Cocoa API 中的一些事件，例如按钮点击。
 
+Driver 是一个 Observable，特别地，由于它是一个 Units，那么它就是一个具有 Units 特点的 Observable。
 
+我们可以使用 asDriver(onErrorJustReturn:) 方法将一个 Observable 转成一个 Driver。onErrorJustReturn 参数接收一个当 Observable 发出 error 事件时的默认值。这样也就让 Driver 不再有可能发出 error 事件。
+
+说了这么多，之前文中的代码可以这么优化：
+
+1. 当用户点击 enter 键的时候再发请求
+2. 使用 Units 精简代码
+
+如下：
+
+```swift
+let search = searchCityName.rx.controlEvent(.editingDidEndOnExit).asObservable()
+.map { self.searchCityName.text }
+.flatMap { text in 
+    return Api.shared.currentWeather(city: text ?? "Error")
+}
+.asDriver(onErrorJustReturn: Api.Weather.empty)
+```
+
+Driver 的绑定使用 drive(:)：
+```swift
+search.map { $0.cityName }
+.drive(cityNameLabel.rx.text)
+.addDisposableTo(bag)
+```
 
 
 
