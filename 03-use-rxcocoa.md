@@ -14,6 +14,7 @@ let search = searchCityName.rx.text
 		  .catchErrorJustReturn(Weather.empty)
 	  }
     .observeOn(MainScheduler.instance)
+    .shareReplay(1) 
 ```
 
 我们得到的 search 的类型是一个 Observable<Weather>。
