@@ -1,6 +1,6 @@
 # 善于使用 RxCocoa
 
-[RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa) 是 RxSwift 对 Cocoa 和 Cocoa Touch Framework 的封装。
+[RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa) 是 RxSwift 对 Cocoa 和 Cocoa Touch Framework （以下统称 Cocoa API） 的封装。
 
 ## 例子
 先看一个具体的例子。譬如有一个搜索框 searchCityName（它是一个 UITextField），可以根据用户的最新的输入进行查询：
@@ -42,7 +42,16 @@ RxCocoa 中还有一些特别的 Observable，称为 Units。Units 更适合用�
 - Units 默认在主线程上注册
 - Units share side effects
 
-总结来说，在使用 Units 时会更安心，因为你可能忘记的操作它都帮你处理好了。
+总结来说，在使用 Units 时会更放心，因为你可能忘记的操作它都帮你做好了。
+
+Units 主要分两种:
+
+1. ControlProperty 和 ControlEvent 
+2. Driver
+
+ControlProperty 既是一个 ObservableType 也是 ObserverType，它主要对 Cocoa API 的属性进行封装，例如 UITextField.rx.text。ControlEvent 是一个 ObservableType，它封装了 Cocoa API 中的一些事件，例如按钮点击。
+
+
 
 
 
