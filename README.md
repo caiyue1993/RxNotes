@@ -5,6 +5,9 @@
 - [Why RxSwift and MVVM？](https://github.com/caiyue1993/RxNotes/blob/master/00-why-rxswift-and-mvvm.md)
 - [关于 Observable 和 Operator 的一些认识](https://github.com/caiyue1993/RxNotes/blob/master/01-observable-and-operator.md)
 - [我理解的 Subject](https://github.com/caiyue1993/RxNotes/blob/master/02-what-is-subject.md)
+- [善于使用 RxCocoa（一）](https://github.com/caiyue1993/RxNotes/blob/master/03-use-rxcocoa-one.md)
+- 善于使用 RxCocoa（二）
+- 重要的垃圾回收
 - 谈谈 ViewModel 的结构设计
 ---
 持续写作中。Stay tuned!
