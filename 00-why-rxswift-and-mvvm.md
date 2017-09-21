@@ -36,3 +36,4 @@ RxSwift 的强大之处将在之后的文章中详细阐述，以下提供了相
 2. [RxSwift: Reactive Programming with Swift](https://store.raywenderlich.com/products/rxswift) Ray Wenderlich 出的一本不可多得的好书
 3. [View Models at Kickstarter](https://talk.objc.io/episodes/S01E47-view-models-at-kickstarter) 
 4. [介绍 MVVM](https://github.com/nixzhu/dev-blog/blob/master/2014-06-10-mvvm.md) Nix 早期翻译的一篇关于 MVVM 的文章
+5. [使用 RxSwift 进行响应式编程](https://academy.realm.io/cn/posts/altconf-scott-gardner-reactive-programming-with-rxswift/)
