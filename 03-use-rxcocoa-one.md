@@ -22,7 +22,7 @@ let search = searchCityName.rx.text
 为什么使用 flatMapLatest？因为在一般情况下，用户在输入一个地完整的地名之前，往往都会输入其它的字符。那么我们需要的是获取最新的输入，并对其进行网络请求的封装。之后我们只关心这个网络请求的结果。
 
 ## bind(to:)
-bind(to:) 是对 RxSwift 里的 subscribe(\_:) 的封装。需要明确的一点是，在 RxCocoa 中的绑定都是**单向**的。在实际使用中，bind(to:) 可以将一个 Observable 绑定到一个 Observer 上（准确的说其实是一个实现 ObserverType 协议的实体）上。
+bind(to:) 是 RxCocoa 对 RxSwift 里的 subscribe(\_:) 的封装。需要明确的一点是，在 RxCocoa 中的绑定都是**单向**的。在实际使用中，bind(to:) 可以将一个 Observable 绑定到一个 Observer 上（准确的说其实是绑定到一个实现 ObserverType 协议的实体上。）
 
 继续看上面的例子，我们对拿到的 search 进行处理，将返回的 cityName 绑定到 cityNameLabel 上：
 
